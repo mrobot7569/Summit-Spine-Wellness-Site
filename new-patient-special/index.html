@@ -4,163 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$99 New Patient Special | Summit Spine & Wellness Colleyville</title>
-  <meta name="description" content="Claim the $99 New Patient Clinical Starter Package at Summit Spine & Wellness in Colleyville — consult, exam, imaging as needed, and a personalized care blueprint.">
-  <link rel="canonical" href="https://www.summitspinewellness.com/new-patient-special/">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Claim the $99 New Patient Clinical Starter Package — consult, exam, imaging as needed, personalized care blueprint.">
+  <link rel="canonical" href="https://summit-spine-static.vercel.app/new-patient-special/">
   <meta name="theme-color" content="#030805">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { ssw: { green: '#2d5a3f', deep: '#162f21', cream: '#fdfdfa', warm: '#faf7f2', gold: '#d4af37', 900: '#070f0a', 950: '#030805' } },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Playfair Display', 'Georgia', 'serif'], mono: ['JetBrains Mono', 'monospace'] }
-        }
-      }
-    }
-  </script>
+  <script src="../js/tw-config.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/png" href="../images/logo/summit-spine-logo.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Offer",
-    "name": "$99 New Patient Clinical Starter Package",
-    "price": "99.00",
-    "priceCurrency": "USD",
-    "description": "Comprehensive consultation, postural analysis, orthopedic and neurological exams, necessary digital x-rays, and personalized care blueprint.",
-    "url": "https://www.summitspinewellness.com/new-patient-special/",
-    "seller": {
-      "@type": "Chiropractor",
-      "name": "Summit Spine & Wellness"
-    }
-  }
-  </script>
 </head>
-<body class="font-sans bg-ssw-cream text-slate-800 antialiased" data-nav-base="../" data-nav-active="special">
+<body class="font-sans bg-brand-bg text-slate-800 antialiased overflow-x-hidden" data-nav-base="../" data-nav-mode="special" data-nav-active="special">
+  <div id="site-nav"></div>
 
-  <div id="site-top-bar"></div>
-  <header class="site-header">
-    <div class="container h-[80px] flex items-center justify-between gap-4">
-      <a href="/" class="shrink-0" aria-label="Home">
-        <img src="../images/logo/summit-spine-logo.png" alt="Summit Spine & Wellness" class="site-logo-img" width="220" height="56" decoding="async">
-      </a>
-      <nav id="desktop-nav" class="desktop-nav" aria-label="Main navigation"></nav>
-      <div class="flex items-center gap-2 shrink-0">
-        <a href="/appointment/?promo=1" class="btn btn-primary btn-sm hidden sm:inline-flex">Claim Special</a>
-        <button id="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle menu" class="lg:hidden p-2"></button>
+  <main class="page-pad-nav">
+    <div class="sticky top-16 md:top-20 z-40 bg-brand-green-950 border-b border-brand-green-900 text-white py-5 px-4 shadow-md">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center">
+        <div class="flex items-center gap-2.5 text-xs">
+          <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-yellow-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-yellow-400"></span></span>
+          <span class="font-mono uppercase tracking-wider font-extrabold text-[#faf7f2]">Limited-Time Web Exclusive · $99 Clinical Starter</span>
+        </div>
+        <button type="button" data-open-booking data-promo class="text-[10px] font-extrabold uppercase tracking-widest bg-brand-yellow-400 hover:bg-brand-yellow-500 text-brand-green-950 px-2.5 py-1 rounded-md">Claim Special</button>
       </div>
     </div>
-    <nav id="mobile-nav" class="hidden lg:hidden" aria-label="Mobile navigation"></nav>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow eyebrow--gold">New Patient Offer</span>
-      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 max-w-3xl text-white">
-        $99 Clinical Starter Package
-      </h1>
-      <p class="mt-4 text-white/75 max-w-2xl text-lg font-light">
-        A deep-dive evaluation designed to give you clarity — not a partial check-up with surprise fees.
-      </p>
-    </div>
-  </section>
-
-  <section class="py-14 lg:py-20">
-    <div class="container">
-      <div class="grid lg:grid-cols-12 gap-10 items-start">
-        <div class="lg:col-span-7 space-y-6">
-          <div class="offer-banner">
-            <p class="font-mono text-xs font-bold text-ssw-gold uppercase tracking-widest">Colleyville exclusive</p>
-            <div class="offer-price mt-2">$99</div>
-            <p class="text-white/70 text-sm mt-2">First-time visitors who request an appointment online</p>
-          </div>
-
-          <h2 class="section-title text-2xl sm:text-3xl">What's included</h2>
-          <ul class="space-y-3">
-            <li class="check-row"><span class="check">✓</span><span><strong>Comprehensive consultation</strong> with Dr. Spencer Hiebert</span></li>
-            <li class="check-row"><span class="check">✓</span><span><strong>Postural balance analysis</strong></span></li>
-            <li class="check-row"><span class="check">✓</span><span><strong>Orthopedic & neurological exams</strong></span></li>
-            <li class="check-row"><span class="check">✓</span><span><strong>Digital x-rays</strong> when medically indicated</span></li>
-            <li class="check-row"><span class="check">✓</span><span><strong>Personalized care blueprint</strong> discussed on follow-up</span></li>
-          </ul>
-
-          <div class="card p-6 sm:p-8 mt-4">
-            <h3 class="font-display font-bold text-xl text-ssw-900">A letter from Dr. Hiebert</h3>
-            <div class="flex gap-4 items-center mt-4">
-              <img src="../images/photos/dr-hiebert.png" alt="Dr. Spencer Hiebert" class="w-16 h-16 rounded-full object-cover object-top border-2 border-[var(--ssw-cream-dark)]" width="64" height="64" loading="lazy">
-              <div>
-                <p class="font-bold text-ssw-900 text-sm">Dr. Spencer Hiebert, D.C.</p>
-                <p class="text-xs text-[var(--ssw-muted)]">Webster Certified · Colleyville, TX</p>
-              </div>
+    <header class="relative bg-[#020d09] pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80" alt="" class="w-full h-full object-cover opacity-60" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#020d09] via-[#020d09]/60 to-transparent"></div>
+      </div>
+      <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-brand-yellow-400/10 border border-brand-yellow-400/20 px-3.5 py-1.5 rounded-full">
+          <span class="font-mono text-[10px] font-bold text-brand-yellow-400 tracking-widest uppercase">Limited-Time Web Exclusive Promotional Package</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+          The $99 New Patient<br>
+          <span class="hero-glow">Clinical Starter Package</span>
+        </h1>
+        <p class="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto font-light leading-relaxed">Stop letting persistent stiffness, old sports injuries, and constant back tension dictate your days. Lock in our comprehensive doctor-led examination, diagnostic digital x-rays, and custom relief strategy.</p>
+        <div class="max-w-md mx-auto pt-4">
+          <div class="bg-white/[0.03] border border-white/10 p-5 rounded-2xl backdrop-blur-md text-left space-y-4">
+            <div class="flex justify-between items-baseline border-b border-white/15 pb-2">
+              <span class="text-white text-xs font-semibold uppercase tracking-wider">Clinical Value</span>
+              <span class="text-slate-400 text-xs line-through">$350 Value</span>
             </div>
-            <p class="text-sm text-[var(--ssw-muted)] leading-relaxed mt-4">
-              We want high-end clinical care accessible to our Colleyville, Grapevine, and Keller neighbors. This package is a professional evaluation designed to give you complete clarity on how to resolve your pain — not a bait-and-switch promo.
-            </p>
+            <div class="flex justify-between items-center text-white">
+              <span class="text-sm font-bold text-slate-200">New Patient Price</span>
+              <span class="text-3xl font-mono font-black text-brand-yellow-400">$99</span>
+            </div>
           </div>
         </div>
-
-        <div class="lg:col-span-5">
-          <div class="card p-6 sm:p-8 sticky top-28">
-            <h2 class="font-display font-bold text-xl text-ssw-900">Claim your package</h2>
-            <p class="text-sm text-[var(--ssw-muted)] mt-2 leading-relaxed">
-              Request an appointment and check “new patient.” Our team will lock in your $99 diagnostic voucher and confirm your visit.
-            </p>
-            <a href="/appointment/?promo=1&service=consult" class="btn btn-primary w-full mt-6">Claim $99 Special →</a>
-            <a href="tel:+18175550199" data-ssw-phone-href class="btn btn-outline-dark w-full mt-3">
-              Call <span data-ssw-phone-text>(817) 555-0199</span>
-            </a>
-            <p class="text-xs text-[var(--ssw-muted)] mt-4 leading-relaxed">
-              HSA/FSA accepted. Out-of-network with most commercial plans. Superbills available for reimbursement.
-            </p>
+        <button type="button" data-open-booking data-promo class="px-8 py-4 bg-brand-yellow-400 hover:bg-brand-yellow-500 text-brand-green-950 font-extrabold text-sm uppercase tracking-wider rounded-xl shadow-lg">Claim Your $99 Package →</button>
+      </div>
+    </header>
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-100 bg-[#faf8f4]"><h3 class="font-display font-bold text-lg text-brand-green-900">What's included</h3><ul class="mt-4 space-y-2 text-sm text-slate-600"><li>✓ Comprehensive consultation with Dr. Hiebert</li><li>✓ Postural balance analysis</li><li>✓ Orthopedic & neurological exams</li><li>✓ Digital x-rays when medically indicated</li><li>✓ Personalized care blueprint on follow-up</li></ul></div>
+        <div class="p-6 rounded-2xl border border-slate-100 bg-white shadow-sm flex gap-4">
+          <img src="../images/photos/dr-hiebert.png" alt="Dr. Hiebert" class="w-20 h-20 rounded-full object-cover object-top border-2 border-brand-cream-dark" width="80" height="80">
+          <div>
+            <h3 class="font-display font-bold text-lg text-brand-green-900">A letter from Dr. Hiebert</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">We want high-end clinical care accessible to Colleyville, Grapevine, and Keller neighbors. This is a professional evaluation designed to give you clarity — not a bait-and-switch promo.</p>
+            <p class="text-xs font-bold text-brand-green-700 mt-2">Dr. Spencer Hiebert, D.C.</p>
           </div>
         </div>
       </div>
-
-      <div class="mt-16 max-w-3xl">
-        <h2 class="section-title text-2xl mb-6">Frequently asked</h2>
-        <div class="faq-item" data-faq-item>
-          <button type="button" data-faq-toggle aria-expanded="false">
-            Will I get an adjustment on my first visit?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div data-faq-panel hidden>
-            We prioritize a thorough diagnostic evaluation before altering your spine. If clinically indicated and safe after history and exam (and without waiting for x-ray processing when appropriate), you may receive a therapeutic adjustment — we never adjust blindly.
-          </div>
-        </div>
-        <div class="faq-item" data-faq-item>
-          <button type="button" data-faq-toggle aria-expanded="false">
-            Do you accept insurance?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div data-faq-panel hidden>
-            We are out-of-network with most commercial plans so care isn't restricted by insurance codes. We accept HSA/FSA, offer cash-pay rates, and can provide superbills for out-of-network reimbursement.
-          </div>
-        </div>
-        <div class="faq-item" data-faq-item>
-          <button type="button" data-faq-toggle aria-expanded="false">
-            Are there contracts or pressure to buy packages?
-            <span class="faq-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div data-faq-panel hidden>
-            No. After your evaluation, Dr. Hiebert explains exactly what your body needs. There are no high-pressure sales tactics or mandatory treatment contracts. You stay in control of your care pathway.
-          </div>
-        </div>
+      <div class="max-w-3xl mx-auto px-4 mt-12 text-center">
+        <button type="button" data-open-booking data-promo class="px-10 py-5 bg-brand-green-600 hover:bg-brand-green-500 text-white font-extrabold text-sm uppercase tracking-wider rounded-xl">Secure Your Voucher & Book →</button>
+        <p class="text-[10px] text-slate-400 leading-relaxed mt-8 text-left">THE PATIENT AND ANY OTHER PERSON RESPONSIBLE FOR PAYMENT HAS A RIGHT TO REFUSE TO PAY, CANCEL PAYMENT, OR BE REIMBURSED FOR PAYMENT FOR ANY OTHER SERVICE, EXAMINATION, OR TREATMENT THAT IS PERFORMED AS A RESULT OF AND WITHIN 72 HOURS OF RESPONDING TO THE ADVERTISEMENT FOR THE FREE, DISCOUNTED FEE, OR REDUCED FEE SERVICE, EXAMINATION, OR TREATMENT.</p>
       </div>
-
-      <p class="text-[10px] text-slate-400 leading-relaxed mt-12 max-w-3xl">
-        THE PATIENT AND ANY OTHER PERSON RESPONSIBLE FOR PAYMENT HAS A RIGHT TO REFUSE TO PAY, CANCEL PAYMENT, OR BE REIMBURSED FOR PAYMENT FOR ANY OTHER SERVICE, EXAMINATION, OR TREATMENT THAT IS PERFORMED AS A RESULT OF AND WITHIN 72 HOURS OF RESPONDING TO THE ADVERTISEMENT FOR THE FREE, DISCOUNTED FEE, OR REDUCED FEE SERVICE, EXAMINATION, OR TREATMENT.
-      </p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <div id="site-footer"></div>
   <script src="../js/site-config.js"></script>
+  <script src="../js/data.js"></script>
   <script src="../js/nav.js"></script>
   <script src="../js/footer.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="../js/booking.js"></script>
+  
 </body>
 </html>

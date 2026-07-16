@@ -1,89 +1,62 @@
 (function () {
-  const base = document.body.dataset.navBase || "";
   const cfg = window.SSW || {};
   const year = new Date().getFullYear();
   const root = document.getElementById("site-footer");
   if (!root) return;
-
+  const base = document.body.dataset.navBase || "";
+  const logo = base + (cfg.assets?.logoWhite || "images/logo/summit-spine-logo-white.png");
   const phone = cfg.phone || "(817) 555-0199";
   const phoneHref = cfg.phoneHref || "tel:+18175550199";
   const email = cfg.email || "care@summitcolleyville.com";
   const emailHref = cfg.emailHref || "mailto:care@summitcolleyville.com";
-  const addr = (cfg.address && cfg.address.full) || "6416 Colleyville Blvd, Suite 108, Colleyville, TX 76034";
-  const phoneNote =
-    cfg.placeholders && cfg.placeholders.phone
-      ? '<span class="placeholder-note">Placeholder</span>'
-      : "";
-  const emailNote =
-    cfg.placeholders && cfg.placeholders.email
-      ? '<span class="placeholder-note">Placeholder</span>'
-      : "";
-
-  /* Root-relative clean URLs for Vercel */
-  const home = "/";
-  const services = "/services/";
-  const conditions = "/conditions/";
-  const about = "/about/";
-  const special = "/new-patient-special/";
-  const appointment = "/appointment/";
-  const contact = "/contact/";
-  const privacy = "/privacy-policy/";
-  const terms = "/terms-of-service/";
+  const phoneNote = cfg.placeholders?.phone ? '<span class="placeholder-note ml-1">Placeholder</span>' : "";
+  const emailNote = cfg.placeholders?.email ? '<span class="placeholder-note ml-1">Placeholder</span>' : "";
 
   root.innerHTML = `
-  <footer class="site-footer">
-    <div class="container py-14">
-      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-        <div class="lg:col-span-1">
-          <a href="${home}" class="footer-logo inline-block mb-4">
-            <img src="${base}images/logo/summit-spine-logo-white.png" alt="Summit Spine & Wellness" class="footer-logo__img" width="200" height="72" loading="lazy">
+  <footer class="bg-brand-green-950 text-[#faf7f2]/70 py-16 border-t border-white/5 font-sans relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <div class="md:col-span-5 space-y-6 text-left">
+          <a href="/" class="flex items-center group">
+            <img src="${logo}" alt="Summit Spine & Wellness Logo" class="h-16 sm:h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105">
           </a>
-          <p class="text-sm text-white/70 leading-relaxed max-w-xs">
-            Premium chiropractic, spinal decompression, and recovery care in Colleyville, TX. Root-cause care so you can move better and get back to the summit.
+          <p class="text-xs sm:text-sm text-neutral-400 font-light max-w-sm leading-relaxed">
+            We are committed to providing premium chiropractic, computerized spinal decompression, and dynamic soft tissue recovery options in South DFW.
           </p>
+          <div class="text-xs text-neutral-400 font-mono space-y-1 block">
+            <span>📍 6416 Colleyville Blvd, Suite 108 · Colleyville, TX 76034</span><br>
+            <span>📞 Phone: <a href="${phoneHref}" class="hover:text-brand-yellow-400">${phone}</a>${phoneNote}</span><br>
+            <span>✉ Email: <a href="${emailHref}" class="hover:text-brand-yellow-400">${email}</a>${emailNote}</span>
+          </div>
         </div>
-        <div>
-          <h3 class="footer-heading">Explore</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="${services}">Services</a></li>
-            <li><a href="${conditions}">Conditions Treated</a></li>
-            <li><a href="${about}">About Dr. Hiebert</a></li>
-            <li><a href="${special}">$99 New Patient Special</a></li>
-            <li><a href="${appointment}">Book Appointment</a></li>
-            <li><a href="${contact}">Contact & Hours</a></li>
+        <div class="md:col-span-3 text-left space-y-4">
+          <h5 class="font-mono text-xs font-bold text-white uppercase tracking-wider">EXPLORE PATHWAYS</h5>
+          <ul class="text-xs sm:text-sm space-y-2.5 font-bold font-sans uppercase tracking-wider">
+            <li><a href="/services/" class="hover:text-brand-yellow-400 transition-colors">Services</a></li>
+            <li><a href="/conditions/" class="hover:text-brand-yellow-400 transition-colors">Conditions Treated</a></li>
+            <li><a href="/about/" class="hover:text-brand-yellow-400 transition-colors">About</a></li>
+            <li><a href="/contact/" class="hover:text-brand-yellow-400 transition-colors">Contact</a></li>
+            <li><a href="/new-patient-special/" class="hover:text-brand-yellow-400 transition-colors">$99 Special</a></li>
           </ul>
         </div>
-        <div>
-          <h3 class="footer-heading">Service Area</h3>
-          <ul class="space-y-2 text-sm text-white/75">
-            <li>Colleyville, TX</li>
-            <li>Grapevine · Southlake · Keller</li>
-            <li>DFW metro patients welcome</li>
-            <li>Walk-ins welcome</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-heading">Visit Us</h3>
-          <ul class="space-y-3 text-sm">
-            <li class="text-white/75">${addr}</li>
-            <li>
-              <a href="${phoneHref}" class="font-bold text-white hover:text-[var(--ssw-gold)]">${phone}</a>
-              ${phoneNote}
-            </li>
-            <li>
-              <a href="${emailHref}">${email}</a>
-              ${emailNote}
-            </li>
-            <li class="text-white/70">Mon–Thu full day · Fri morning · Closed weekends</li>
-          </ul>
-          <a href="${appointment}" class="btn btn-primary btn-sm mt-5">Request Appointment</a>
+        <div class="md:col-span-4 text-left space-y-5">
+          <h5 class="font-mono text-xs font-bold text-white uppercase tracking-wider">LICENSES & INTEGRATIONS</h5>
+          <div class="space-y-3 bg-[#faf7f2]/5 p-5 rounded-2xl border border-white/5">
+            <span class="block text-[10px] font-mono text-[#d4af37] font-bold uppercase">✓ BOARD & SPECIALIST DECLARED</span>
+            <p class="text-xs text-neutral-400 font-light leading-relaxed">Webster pelvic safety criteria fully applied. In-house digital diagnostics, dynamic cupping, therapeutic lasers, and full recovery cabins on site.</p>
+            <div class="flex gap-2 flex-wrap">
+              <span class="inline-block bg-white/5 border border-white/10 px-2.5 py-1 rounded text-[9px] font-bold text-white tracking-widest uppercase">HSA/FSA VALID</span>
+              <span class="inline-block bg-white/5 border border-white/10 px-2.5 py-1 rounded text-[9px] font-bold text-white tracking-widest uppercase">WEBSTER CERT</span>
+            </div>
+          </div>
+          <button type="button" data-open-booking class="w-full sm:w-auto px-6 py-3 bg-brand-green-500 hover:bg-brand-green-600 text-white font-extrabold text-xs uppercase tracking-wider rounded-xl">Request Appointment</button>
         </div>
       </div>
       <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-white/50">
         <p>© ${year} Summit Spine & Wellness, LLC. All rights reserved.</p>
         <div class="flex gap-4">
-          <a href="${privacy}">Privacy Policy</a>
-          <a href="${terms}">Terms of Service</a>
+          <a href="/privacy-policy/" class="hover:text-brand-yellow-400">Privacy Policy</a>
+          <a href="/terms-of-service/" class="hover:text-brand-yellow-400">Terms of Service</a>
         </div>
       </div>
     </div>

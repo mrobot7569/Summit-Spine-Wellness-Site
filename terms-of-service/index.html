@@ -4,73 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service | Summit Spine & Wellness</title>
-  <meta name="description" content="Terms of service for the Summit Spine & Wellness website.">
-  <link rel="canonical" href="https://www.summitspinewellness.com/terms-of-service/">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Terms of Service for Summit Spine & Wellness.">
+  <link rel="canonical" href="https://summit-spine-static.vercel.app/terms-of-service/">
   <meta name="theme-color" content="#030805">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { ssw: { green: '#2d5a3f', deep: '#162f21', cream: '#fdfdfa', warm: '#faf7f2', gold: '#d4af37', 900: '#070f0a', 950: '#030805' } },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Playfair Display', 'Georgia', 'serif'] }
-        }
-      }
-    }
-  </script>
+  <script src="../js/tw-config.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="icon" type="image/png" href="../images/logo/summit-spine-logo.png">
 </head>
-<body class="font-sans bg-ssw-cream text-slate-800 antialiased" data-nav-base="../" data-nav-active="">
+<body class="font-sans bg-brand-bg text-slate-800 antialiased overflow-x-hidden" data-nav-base="../" data-nav-mode="solid" data-nav-active="">
+  <div id="site-nav"></div>
 
-  <div id="site-top-bar"></div>
-  <header class="site-header">
-    <div class="container h-[80px] flex items-center justify-between gap-4">
-      <a href="/" class="shrink-0" aria-label="Home">
-        <img src="../images/logo/summit-spine-logo.png" alt="Summit Spine & Wellness" class="site-logo-img" width="220" height="56" decoding="async">
-      </a>
-      <nav id="desktop-nav" class="desktop-nav" aria-label="Main navigation"></nav>
-      <div class="flex items-center gap-2 shrink-0">
-        <a href="/appointment/" class="btn btn-primary btn-sm hidden sm:inline-flex">Book Appointment</a>
-        <button id="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle menu" class="lg:hidden p-2"></button>
-      </div>
-    </div>
-    <nav id="mobile-nav" class="hidden lg:hidden" aria-label="Mobile navigation"></nav>
-  </header>
-
-  <section class="page-hero">
-    <div class="container">
-      <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Terms of Service</h1>
-      <p class="mt-3 text-white/70 text-sm">Last updated: July 16, 2026</p>
-    </div>
-  </section>
-
-  <section class="py-14">
-    <div class="container legal-prose">
-      <p>By using the Summit Spine & Wellness website, you agree to these terms. If you do not agree, please do not use the site.</p>
-      <h2>Informational purpose only</h2>
-      <p>Content on this website is for general educational and marketing purposes. It is not medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for personal medical decisions. Do not delay seeking care because of something you read here.</p>
-      <h2>Appointments</h2>
-      <p>Online appointment requests are requests only. A visit is not confirmed until the clinic contacts you and locks in a time. Walk-in availability may vary.</p>
-      <h2>Promotional offers</h2>
-      <p>New patient specials and other offers are subject to eligibility, availability, and clinic policies. Required advertising disclosures may apply under Texas law for discounted healthcare services.</p>
-      <h2>Intellectual property</h2>
-      <p>Site design, branding, text, and media are owned by Summit Spine & Wellness or used with permission. You may not copy or reuse materials without written consent.</p>
-      <h2>Limitation of liability</h2>
-      <p>To the fullest extent permitted by law, we are not liable for damages arising from use of, or inability to use, this website or reliance on its content.</p>
-      <h2>Contact</h2>
-      <p>Questions about these terms: see our <a href="/contact/">Contact</a> page.</p>
-    </div>
-  </section>
+  <main class="page-pad-nav">
+    <section class="page-hero-ai"><div class="max-w-7xl mx-auto px-4"><h1 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Terms of Service</h1><p class="mt-3 text-white/70 text-sm">Last updated: July 16, 2026</p></div></section>
+    <section class="py-14"><div class="max-w-3xl mx-auto px-4 prose prose-slate text-slate-600 text-sm leading-relaxed space-y-4">
+      <p>This terms of service applies to the Summit Spine & Wellness website and online inquiry forms. For clinical care policies, contact the clinic directly.</p>
+      <p>Questions: see our <a href="/contact/" class="text-brand-green-600 font-semibold underline">Contact</a> page.</p>
+    </div></section>
+  </main>
 
   <div id="site-footer"></div>
   <script src="../js/site-config.js"></script>
+  <script src="../js/data.js"></script>
   <script src="../js/nav.js"></script>
   <script src="../js/footer.js"></script>
-  <script src="../js/main.js"></script>
+  <script src="../js/booking.js"></script>
+  
 </body>
 </html>
