@@ -3,22 +3,33 @@
   const active = document.body.dataset.navActive || "";
   const cfg = window.SSW || {};
 
+  /** Root-relative clean URLs (works with Vercel cleanUrls + trailingSlash). */
+  const pages = {
+    home: "/",
+    services: "/services/",
+    conditions: "/conditions/",
+    about: "/about/",
+    special: "/new-patient-special/",
+    appointment: "/appointment/",
+    contact: "/contact/"
+  };
+
   const desktopLinks = [
-    { id: "home", label: "Home", href: base + "index.html" },
-    { id: "services", label: "Services", href: base + "services/index.html" },
-    { id: "conditions", label: "Conditions", href: base + "conditions/index.html" },
-    { id: "about", label: "About", href: base + "about/index.html" },
-    { id: "special", label: "New Patient", href: base + "new-patient-special/index.html" },
-    { id: "contact", label: "Contact", href: base + "contact/index.html" }
+    { id: "services", label: "Services", href: pages.services },
+    { id: "conditions", label: "Conditions", href: pages.conditions },
+    { id: "about", label: "About", href: pages.about },
+    { id: "special", label: "New Patient", href: pages.special },
+    { id: "contact", label: "Contact", href: pages.contact }
   ];
 
   const mobileLinks = [
-    { id: "services", label: "Services", href: base + "services/index.html", hint: "Chiropractic · Decompression · Recovery" },
-    { id: "conditions", label: "Conditions", href: base + "conditions/index.html", hint: "Back, neck, sciatica & more" },
-    { id: "about", label: "About", href: base + "about/index.html", hint: "Meet Dr. Hiebert" },
-    { id: "special", label: "New Patient Special", href: base + "new-patient-special/index.html", hint: "$99 clinical starter package" },
-    { id: "appointment", label: "Book Appointment", href: base + "appointment/index.html", hint: "Request a visit" },
-    { id: "contact", label: "Contact", href: base + "contact/index.html", hint: "Hours, map & phone" }
+    { id: "home", label: "Home", href: pages.home, hint: "Summit Spine & Wellness" },
+    { id: "services", label: "Services", href: pages.services, hint: "Chiropractic · Decompression · Recovery" },
+    { id: "conditions", label: "Conditions", href: pages.conditions, hint: "Back, neck, sciatica & more" },
+    { id: "about", label: "About", href: pages.about, hint: "Meet Dr. Hiebert" },
+    { id: "special", label: "New Patient Special", href: pages.special, hint: "$99 clinical starter package" },
+    { id: "appointment", label: "Book Appointment", href: pages.appointment, hint: "Request a visit" },
+    { id: "contact", label: "Contact", href: pages.contact, hint: "Hours, map & phone" }
   ];
 
   function isActive(id) {
@@ -27,7 +38,10 @@
 
   const phoneHref = cfg.phoneHref || "tel:+18175550199";
   const phoneText = cfg.phone || "(817) 555-0199";
-  const bookHref = base + "appointment/index.html";
+  const bookHref = pages.appointment;
+
+  /* Asset base for images (still depth-relative for local file:// if needed) */
+  const assetBase = base;
 
   const desktop = document.getElementById("desktop-nav");
   if (desktop) {
@@ -35,6 +49,20 @@
       .map((l) => `<a href="${l.href}" class="nav-link${isActive(l.id)}">${l.label}</a>`)
       .join("");
   }
+
+  /* Header logo + primary CTA → clean URLs */
+  document.querySelectorAll(".site-header a[aria-label]").forEach((el) => {
+    const label = (el.getAttribute("aria-label") || "").toLowerCase();
+    if (label.includes("home")) el.setAttribute("href", pages.home);
+  });
+  document.querySelectorAll(".site-header a.btn").forEach((el) => {
+    const text = (el.textContent || "").toLowerCase();
+    if (text.includes("claim")) {
+      el.setAttribute("href", pages.appointment + "?promo=1");
+    } else if (text.includes("book") || text.includes("appointment")) {
+      el.setAttribute("href", pages.appointment);
+    }
+  });
 
   const mobile = document.getElementById("mobile-nav");
   if (mobile) {
@@ -48,8 +76,8 @@
       <div class="mobile-menu__backdrop" data-menu-close tabindex="-1" aria-hidden="true"></div>
       <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
         <div class="mobile-menu__top">
-          <a href="${base}index.html" class="mobile-menu__logo" aria-label="Summit Spine & Wellness home">
-            <img src="${base}images/logo/summit-spine-logo.png" alt="Summit Spine & Wellness" width="200" height="56" decoding="async">
+          <a href="${pages.home}" class="mobile-menu__logo" aria-label="Summit Spine & Wellness home">
+            <img src="${assetBase}images/logo/summit-spine-logo.png" alt="Summit Spine & Wellness" width="200" height="56" decoding="async">
           </a>
           <button type="button" class="mobile-menu__close" data-menu-close aria-label="Close menu">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true">
