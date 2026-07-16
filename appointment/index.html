@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | Summit Spine & Wellness Colleyville</title>
+  <meta name="description" content="Request an appointment with Dr. Spencer Hiebert at Summit Spine & Wellness in Colleyville, TX. Walk-ins welcome. Mon–Fri clinic hours.">
+  <link rel="canonical" href="https://www.summitspinewellness.com/appointment/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#030805">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ssw: { green: '#2d5a3f', deep: '#162f21', cream: '#fdfdfa', warm: '#faf7f2', gold: '#d4af37', 900: '#070f0a', 950: '#030805' } },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Playfair Display', 'Georgia', 'serif'], mono: ['JetBrains Mono', 'monospace'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/logo/summit-spine-logo.png">
+</head>
+<body class="font-sans bg-ssw-cream text-slate-800 antialiased" data-nav-base="../" data-nav-active="appointment">
+
+  <div id="site-top-bar"></div>
+  <header class="site-header">
+    <div class="container h-[80px] flex items-center justify-between gap-4">
+      <a href="../index.html" class="shrink-0" aria-label="Home">
+        <img src="../images/logo/summit-spine-logo.png" alt="Summit Spine & Wellness" class="site-logo-img" width="220" height="56" decoding="async">
+      </a>
+      <nav id="desktop-nav" class="hidden lg:flex items-center gap-0.5" aria-label="Main navigation"></nav>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="index.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Book Appointment</a>
+        <button id="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle menu" class="lg:hidden p-2"></button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden lg:hidden" aria-label="Mobile navigation"></nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--gold">Appointments</span>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 max-w-3xl text-white">
+        Request Your Visit With Dr. Hiebert
+      </h1>
+      <p class="mt-4 text-white/75 max-w-2xl text-lg font-light">
+        Prefer to call? <a href="tel:+18175550199" data-ssw-phone-href class="text-ssw-gold font-semibold underline"><span data-ssw-phone-text>(817) 555-0199</span></a>
+        <span class="placeholder-note ml-1">Placeholder</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-14 lg:py-20">
+    <div class="container max-w-2xl">
+      <div id="form-success" class="form-success hidden">
+        <p class="text-ssw-green font-mono text-xs font-bold uppercase tracking-widest">Request received</p>
+        <h2 class="font-display text-2xl font-bold text-ssw-900 mt-2">We've reserved your slot.</h2>
+        <p class="text-sm text-[var(--ssw-muted)] mt-3 leading-relaxed">
+          Your reference code is <strong id="booking-ref" class="text-ssw-green font-mono">SUMMIT-000000</strong>.
+          Our intake coordinator will reach out via text or phone within the next couple of business hours to confirm your exact time.
+        </p>
+        <p class="text-xs text-[var(--ssw-muted)] mt-4">
+          <span class="placeholder-note">Demo form</span> — connect Formbold / Formspree / clinic scheduling software to go live.
+        </p>
+        <a href="../index.html" class="btn btn-primary btn-sm mt-6">Back to Home</a>
+      </div>
+
+      <form id="appointment-form" class="form-card" novalidate>
+        <h2 class="font-display text-2xl font-bold text-ssw-900">Appointment request</h2>
+        <p class="text-sm text-[var(--ssw-muted)] mt-1 mb-6">Mon–Thu: 9:00 AM – 1:00 PM & 2:30 PM – 6:00 PM · Fri: 9:00 AM – 1:00 PM · Closed weekends</p>
+
+        <div class="space-y-4">
+          <div>
+            <label class="form-label" for="service">Preferred service</label>
+            <select class="form-select" id="service" name="service" required>
+              <option value="chiro">Chiropractic Adjustments</option>
+              <option value="decompression">Spinal Decompression</option>
+              <option value="rehab">Active Rehabilitation</option>
+              <option value="needling">Dry Needling</option>
+              <option value="massage">Massage Therapy</option>
+              <option value="prenatal">Prenatal & Pediatric</option>
+              <option value="accident">Auto Accident & Injury</option>
+              <option value="xray">X-Ray & Diagnostics</option>
+              <option value="red-light">Red Light Therapy</option>
+              <option value="sauna">Infrared Sauna</option>
+              <option value="cupping">Cupping Therapy</option>
+              <option value="exercises">Corrective Exercises</option>
+              <option value="taping">Kinesio Taping</option>
+              <option value="estim">E-Stim & Ultrasound</option>
+              <option value="consult">New Patient Consultation</option>
+            </select>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="form-label" for="preferredDate">Preferred date</label>
+              <input class="form-input" type="date" id="preferredDate" name="preferredDate" required>
+            </div>
+            <div>
+              <label class="form-label" for="timeSlot">Preferred time</label>
+              <select class="form-select" id="timeSlot" name="timeSlot">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="name">Full name</label>
+            <input class="form-input" type="text" id="name" name="name" autocomplete="name" required placeholder="Jane Doe">
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" autocomplete="email" required placeholder="you@email.com">
+            </div>
+            <div>
+              <label class="form-label" for="phone">Phone</label>
+              <input class="form-input" type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="(817) 555-0199">
+            </div>
+          </div>
+
+          <div>
+            <label class="form-label" for="message">Message (optional)</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Briefly describe your symptoms or goals"></textarea>
+          </div>
+
+          <label class="flex items-start gap-2 text-sm text-slate-600 cursor-pointer">
+            <input type="checkbox" name="isNewPatient" value="1" class="mt-1 rounded border-slate-300">
+            <span>I am a new patient (interested in the $99 clinical starter package)</span>
+          </label>
+        </div>
+
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+        <button type="submit" class="btn btn-primary w-full mt-4">Submit Request</button>
+        <p class="text-xs text-[var(--ssw-muted)] mt-4 text-center">
+          Submitting does not guarantee a time slot until confirmed by the clinic.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/appointment.js"></script>
+</body>
+</html>

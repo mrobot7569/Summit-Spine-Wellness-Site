@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiropractic Services Colleyville | Summit Spine & Wellness</title>
+  <meta name="description" content="Chiropractic adjustments, spinal decompression, dry needling, massage, rehab, prenatal care, red light therapy, infrared sauna, and more at Summit Spine & Wellness in Colleyville, TX.">
+  <link rel="canonical" href="https://www.summitspinewellness.com/services/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#030805">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ssw: { green: '#2d5a3f', deep: '#162f21', cream: '#fdfdfa', warm: '#faf7f2', gold: '#d4af37', 900: '#070f0a', 950: '#030805' } },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Playfair Display', 'Georgia', 'serif'], mono: ['JetBrains Mono', 'monospace'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/png" href="../images/logo/summit-spine-logo.png">
+</head>
+<body class="font-sans bg-ssw-cream text-slate-800 antialiased" data-nav-base="../" data-nav-active="services">
+
+  <div id="site-top-bar"></div>
+  <header class="site-header">
+    <div class="container h-[80px] flex items-center justify-between gap-4">
+      <a href="../index.html" class="shrink-0" aria-label="Home">
+        <img src="../images/logo/summit-spine-logo.png" alt="Summit Spine & Wellness" class="site-logo-img" width="220" height="56" decoding="async">
+      </a>
+      <nav id="desktop-nav" class="hidden lg:flex items-center gap-0.5" aria-label="Main navigation"></nav>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="../appointment/index.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Book Appointment</a>
+        <button id="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle menu" class="lg:hidden p-2"></button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden lg:hidden" aria-label="Mobile navigation"></nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--gold">Services</span>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3 max-w-3xl text-white">
+        Chiropractic, Decompression & Recovery — Under One Roof
+      </h1>
+      <p class="mt-4 text-white/75 max-w-2xl text-lg font-light">
+        Comprehensive care in Colleyville built around your goals — not a one-size template.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 lg:py-16 section-green">
+    <div class="container">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+        <p class="text-neutral-300 text-sm max-w-xl">Filter by category or browse the full clinical menu below.</p>
+        <div class="filter-tabs" data-service-filters>
+          <button type="button" class="filter-tab is-active" data-filter="all">All</button>
+          <button type="button" class="filter-tab" data-filter="chiropractic">Chiropractic</button>
+          <button type="button" class="filter-tab" data-filter="specialized">Advanced</button>
+          <button type="button" class="filter-tab" data-filter="recovery">Recovery</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <article id="chiro" class="service-card scroll-mt-28" data-service-category="chiropractic">
+          <div>
+            <span class="service-card__cat">Joint Alignment</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Chiropractic Adjustments</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Precision, evidence-based joint manipulations to restore motion, optimize biomechanics, and soothe nervous system tension. Diversified, activator, and drop-table techniques tailored to your comfort.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Improves joint range of motion</li>
+              <li>✓ Reduces acute & chronic pain</li>
+              <li>✓ Restores proper nerve communication</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=chiro" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="decompression" class="service-card scroll-mt-28" data-service-category="specialized">
+          <div>
+            <span class="service-card__cat">Computerized Structural</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Spinal Decompression</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Nonsurgical computerized traction that gently unloads pressure on discs — ideal for sciatica, herniated or bulging discs, degeneration, and pinched nerves.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Reduces disc bulges/herniations</li>
+              <li>✓ Increases blood flow to damaged tissue</li>
+              <li>✓ Relieves nerve root impingement</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=decompression" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="rehab" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Athletic Recovery</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Active Rehabilitation</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Guided mobility, stability, and strengthening protocols designed to reinforce adjustments and speed recovery for long-term results.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Restores movement confidence</li>
+              <li>✓ Improves balance and alignment</li>
+              <li>✓ Prevents re-injury patterns</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=rehab" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="needling" class="service-card scroll-mt-28" data-service-category="specialized">
+          <div>
+            <span class="service-card__cat">Tissue Therapy</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Dry Needling</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Single-use filament insertions into deep muscular trigger points to break tension loops and reset neurological tone.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Relieves muscular trigger points</li>
+              <li>✓ Boosts local healing response</li>
+              <li>✓ Accelerates athletic recovery</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=needling" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="massage" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Soft Tissue</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Massage Therapy</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Medical and therapeutic soft-tissue work — deep tissue, myofascial release, and Swedish — integrated with clinical recommendations.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Reduces soft-tissue tension</li>
+              <li>✓ Boosts lymphatic circulation</li>
+              <li>✓ Induces deep nervous-system relaxation</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=massage" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="prenatal" class="service-card scroll-mt-28" data-service-category="chiropractic">
+          <div>
+            <span class="service-card__cat">Webster Certified</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Prenatal & Pediatric Chiropractic</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Ultra-gentle adjustments for expectant mothers and developing children. Dr. Hiebert is Webster Certified for pelvic-balancing techniques.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Balances pelvic alignment for birth</li>
+              <li>✓ Reduces pregnancy back & hip fatigue</li>
+              <li>✓ Safe, non-force pediatric care</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=prenatal" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="accident" class="service-card scroll-mt-28" data-service-category="specialized">
+          <div>
+            <span class="service-card__cat">Injury Recovery</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Auto Accident & Injury Recovery</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Comprehensive evaluations, documentation, and phase-based rehabilitative care for post-collision healing.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Restores range of motion post-trauma</li>
+              <li>✓ Limits chronic scar tissue</li>
+              <li>✓ Detailed medical documentation</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=accident" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="xray" class="service-card scroll-mt-28" data-service-category="specialized">
+          <div>
+            <span class="service-card__cat">Diagnostics</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">X-Ray & Diagnostic Imaging</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">On-site digital radiography and structural biomechanic tracking so treatment targets are clear before adjustments begin.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Finds exact vertebral listings</li>
+              <li>✓ Rules out structural contraindications</li>
+              <li>✓ Evaluates degenerative processes</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=xray" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="red-light" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Cellular Recovery</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Red Light Therapy</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Photobiomodulation with red and near-infrared wavelengths to support cellular healing and microcirculation.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Reduces deep inflammation</li>
+              <li>✓ Accelerates soft-tissue recovery</li>
+              <li>✓ Improves localized circulation</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=red-light" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="sauna" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Thermal Recovery</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Infrared Sauna</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Radiant heat therapy that penetrates deep tissue to ease spasms, support detoxification, and promote calm.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Supports cellular detoxification</li>
+              <li>✓ Soothes chronic muscle aches</li>
+              <li>✓ Activates parasympathetic relaxation</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=sauna" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="cupping" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Soft Tissue</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Cupping Therapy</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Decompressive soft-tissue mobilization using medical cups to lift fascia and release adhesions.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Decompresses restricted fascial layers</li>
+              <li>✓ Promotes local blood flow</li>
+              <li>✓ Speeds lactic acid clearance</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=cupping" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="exercises" class="service-card scroll-mt-28" data-service-category="chiropractic">
+          <div>
+            <span class="service-card__cat">Movement</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Corrective Exercises</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Custom therapeutic movement targeting postural imbalances, joint instability, or motor control deficits.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Enhances postural awareness</li>
+              <li>✓ Balances muscle recruitment</li>
+              <li>✓ Protects during daily activity</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=exercises" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="taping" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Support</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Kinesio Taping</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Elastic therapeutic tape applied along dynamic muscle paths to facilitate motion and improve proprioception.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Supports weak or hypermobile joints</li>
+              <li>✓ Provides constant posture feedback</li>
+              <li>✓ Enhances lymphatic drainage</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=taping" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+
+        <article id="estim" class="service-card scroll-mt-28" data-service-category="recovery">
+          <div>
+            <span class="service-card__cat">Modalities</span>
+            <h2 class="font-display font-extrabold text-2xl text-white mt-3">Electric Stimulation & Ultrasound</h2>
+            <p class="text-sm text-neutral-300 mt-3 leading-relaxed">Dual-modality therapy to interrupt pain signals and deliver localized acoustic heat to deep joints.</p>
+            <ul class="mt-4 space-y-1.5 text-xs text-neutral-200">
+              <li>✓ Blunts acute pain signals</li>
+              <li>✓ Reduces muscle spasms</li>
+              <li>✓ Increases metabolism in recovering tissue</li>
+            </ul>
+          </div>
+          <a href="../appointment/index.html?service=estim" class="btn btn-primary btn-sm mt-6 self-start">Book Session</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band py-16">
+    <div class="container text-center relative z-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Ready to start your plan?</h2>
+      <p class="text-white/70 mt-3 max-w-lg mx-auto text-sm">Request an appointment online or claim the $99 new patient special.</p>
+      <div class="mt-6 flex flex-wrap gap-3 justify-center">
+        <a href="../appointment/index.html" class="btn btn-primary">Book Appointment</a>
+        <a href="../new-patient-special/index.html" class="btn btn-outline">$99 New Patient Special</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
