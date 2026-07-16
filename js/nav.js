@@ -15,6 +15,7 @@
   };
 
   const desktopLinks = [
+    { id: "home", label: "Home", href: pages.home },
     { id: "services", label: "Services", href: pages.services },
     { id: "conditions", label: "Conditions", href: pages.conditions },
     { id: "about", label: "About", href: pages.about },
@@ -48,6 +49,9 @@
     desktop.innerHTML = desktopLinks
       .map((l) => `<a href="${l.href}" class="nav-link${isActive(l.id)}">${l.label}</a>`)
       .join("");
+    // Ensure Tailwind utility classes can't keep the nav display:none on desktop
+    desktop.classList.remove("hidden");
+    desktop.classList.add("desktop-nav");
   }
 
   /* Header logo + primary CTA → clean URLs */
